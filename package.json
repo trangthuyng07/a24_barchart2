@@ -1,0 +1,14 @@
+{
+  "name": "eff7dde41db0583f",
+  "main": "eff7dde41db0583f@108.js",
+  "version": "108.0.0",
+  "homepage": "https://observablehq.com/d/eff7dde41db0583f",
+  "author": {
+    "name": "trangthuy",
+    "url": "https://observablehq.com/@trangthuy"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
