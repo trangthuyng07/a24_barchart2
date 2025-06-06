@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Untitled</title>
-<link rel="stylesheet" type="text/css" href="./inspector.css">
-<body>
-<script type="module">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>A24 Gallery Chart</title>
+    <link rel="stylesheet" href="./inspector.css" />
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="module">
+      import define from "./index.js";
+      import { Runtime, Inspector } from "./runtime.js";
 
-import define from "./index.js";
-import {Runtime, Library, Inspector} from "./runtime.js";
-
-const runtime = new Runtime();
-const main = runtime.module(define, Inspector.into(document.body));
-
-</script>
+      const runtime = new Runtime();
+      runtime.module(define, name => {
+        if (name === "chart") return Inspector.into(document.body)();
+      });
+    </script>
+  </body>
+</html>
